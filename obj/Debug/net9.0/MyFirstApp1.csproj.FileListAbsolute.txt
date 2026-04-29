@@ -1,0 +1,15 @@
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\bin\Debug\net9.0\MyFirstApp1.exe
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\bin\Debug\net9.0\MyFirstApp1.deps.json
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\bin\Debug\net9.0\MyFirstApp1.runtimeconfig.json
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\bin\Debug\net9.0\MyFirstApp1.dll
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\bin\Debug\net9.0\MyFirstApp1.pdb
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.AssemblyInfoInputs.cache
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.AssemblyInfo.cs
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.csproj.CoreCompileInputs.cache
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.sourcelink.json
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.dll
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\refint\MyFirstApp1.dll
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.pdb
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\MyFirstApp1.genruntimeconfig.cache
+C:\Users\venka\OneDrive\Desktop\MyFirstApp1\obj\Debug\net9.0\ref\MyFirstApp1.dll
