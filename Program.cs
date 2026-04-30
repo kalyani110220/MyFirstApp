@@ -3,14 +3,14 @@ class Program
 {
    static void Main()
    {
-      int number = -6;
-      if (number > 0)
+      int number = 6;
+      if (number %2  == 0)
       {
-         Console.WriteLine("Positive Number");
+         Console.WriteLine("Even Number");
       }
-      else if (number < 0)
+      else
       {
-         Console.WriteLine("Negative Number");
+         Console.WriteLine("Odd Number");
       }
    }
 }
