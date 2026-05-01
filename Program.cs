@@ -3,14 +3,22 @@ class Program
 {
    static void Main()
    {
-      int number = 6;
-      if (number %2  == 0)
+      Console.WriteLine("Please enter the Number:");
+      int n = Convert.ToInt32(Console.ReadLine());
+      bool isPrime = true;
+
+      for (int i = 2; i < n; i++)
       {
-         Console.WriteLine("Even Number");
+         if (n % i == 0)
+         {
+            isPrime = false;
+            break;
+         }
       }
+
+      if (isPrime && n > 1)
+         Console.WriteLine("Prime");
       else
-      {
-         Console.WriteLine("Odd Number");
-      }
+         Console.WriteLine("Not Prime");
    }
 }
