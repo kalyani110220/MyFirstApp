@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+}
