@@ -1,61 +1,164 @@
-//1.Load task from local storage
-//if nothing is stored yet,use an empty array
+// =========================
+// LOAD SAVED TASKS
+// =========================
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-//2. Show saved tasks immediately when the page Loads
+// Show tasks immediately
 renderTasks();
+
 
 // =========================
 // ADD TASK
 // =========================
-function addTask()
-{
+function addTask() {
+
     // Get input element
     let input = document.getElementById("taskInput");
 
-    //Get the text and remove extra spaces
+    // Get typed text
     let taskText = input.value.trim();
 
-
-    //Prevent empty tasks
-    if (taskText === "")
-    {
-        alert("please enter a task.");
+    // Prevent empty tasks
+    if (taskText === "") {
+        alert("Please enter a task");
         return;
     }
 
-    //Add task to the array
-    tasks.push(taskText);
-    //clear the input box
+    // Create task object
+    let task = {
+        text: taskText,
+        completed: false
+    };
+
+    // Add task to array
+    tasks.push(task);
+
+    // Clear input box
     input.value = "";
-        // Save updated array to localStorage
+
+    // Save tasks
     saveTasks();
 
-    // Rebuild the UI so the new task appears
+    // Update UI
     renderTasks();
-
 }
+
+
 // =========================
 // RENDER TASKS
 // =========================
-function renderTasks()
-{
-    //Get the UL element
+function renderTasks() {
+
+    // Get UL element
     let list = document.getElementById("taskList");
 
-    // Clear old HTML so we can rebuild it
+    // Clear old tasks
     list.innerHTML = "";
-    //loop through every task in the array
-    tasks.forEach(function (task) {
-        //create one list add it to the page
-        list.innerHTML += `<li>${task}</li>`;
-        
+
+    // Loop through all tasks
+    tasks.forEach((task, index) => {
+
+        list.innerHTML += `
+            <li class="${task.completed ? 'done' : ''}">
+
+                <span onclick="toggleTask(${index})">
+                    ${task.text}
+                </span>
+
+                <div class="task-buttons">
+
+                    <button onclick="editTask(${index})">
+                        ✏️
+                    </button>
+
+                    <button onclick="deleteTask(${index})">
+                        ❌
+                    </button>
+
+                </div>
+
+            </li>
+        `;
     });
 }
+
+
 // =========================
 // SAVE TASKS
 // =========================
 function saveTasks() {
-    // Convert array to JSON string and save it in browser storage
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+}
+
+
+// =========================
+// DELETE TASK
+// =========================
+function deleteTask(index) {
+
+    // Remove task from array
+    tasks.splice(index, 1);
+
+    // Save updated tasks
+    saveTasks();
+
+    // Re-render UI
+    renderTasks();
+}
+
+
+// =========================
+// TOGGLE COMPLETE
+// =========================
+function toggleTask(index) {
+
+    // Reverse true/false
+    tasks[index].completed =
+        !tasks[index].completed;
+
+    // Save updated tasks
+    saveTasks();
+
+    // Re-render UI
+    renderTasks();
+}
+
+
+// =========================
+// EDIT TASK
+// =========================
+function editTask(index) {
+
+    // Ask for new text
+    let newText = prompt(
+        "Edit your task:",
+        tasks[index].text
+    );
+
+    // Cancel pressed
+    if (newText === null) {
+        return;
+    }
+
+    // Remove extra spaces
+    newText = newText.trim();
+
+    // Prevent empty edit
+    if (newText === "") {
+        alert("Task cannot be empty");
+        return;
+    }
+
+    // Update task text
+    tasks[index].text = newText;
+
+    // Save updated tasks
+    saveTasks();
+
+    // Re-render UI
+    renderTasks();
 }
